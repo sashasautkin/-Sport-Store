@@ -16,12 +16,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Items">
 
-    <materialDesign:ColorZone Mode="PrimaryMid"  Padding="20" Height="77">
-        <Grid>
-            <materialDesign:PackIcon  VerticalAlignment="Center" Kind="Ticket" Width="25" Height="25"/>
+    <Grid>
+        <Grid Height="77" VerticalAlignment="Top" Background="#673AB7">
+            <materialDesign:PackIcon RenderTransformOrigin="2.32,0.542" Margin="28,16,0,20" VerticalAlignment="Center" Kind="Ticket" Width="25" Height="25"/>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="30" Margin="72,0,268,1">Here, you can buy something</TextBlock>
         </Grid>
 
 
-    </materialDesign:ColorZone>
+    </Grid>
 </Page>

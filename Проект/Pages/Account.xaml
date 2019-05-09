@@ -16,12 +16,13 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Account">
 
-    <materialDesign:ColorZone Mode="PrimaryMid"  Padding="20" Height="77">
-        <Grid>
-            <materialDesign:PackIcon  VerticalAlignment="Center" Kind="User" Width="25" Height="25"/>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="30" Margin="72,0,268,1">Here, you can change password</TextBlock>
+    <Grid >
+        <Grid Height="77" VerticalAlignment="Top" Background="OrangeRed" >
+            <materialDesign:PackIcon   VerticalAlignment="Center" Kind="User" Width="25" Height="25" RenderTransformOrigin="2.32,0.542" Margin="28,16,0,20"/>
+            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" FontSize="30" Margin="72,0,268,1">Here, you can change password</TextBlock>
         </Grid>
-
-
-    </materialDesign:ColorZone>
+        
+       
+    </Grid>
+    
 </Page>

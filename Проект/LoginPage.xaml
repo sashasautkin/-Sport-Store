@@ -14,7 +14,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Проект"
         mc:Ignorable="d"
-        Title="Login" Height="406" Width="300" FontSize="14" ResizeMode="NoResize" >
+        Title="Login" Height="406" Width="300" FontSize="14" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid Background="#FFFFB900" Margin="0,0,0,0">
         <Border Background="#2e3137" CornerRadius="20 " Margin=" 20">
             <StackPanel Margin=" 20">

@@ -60,7 +60,7 @@
             <BeginStoryboard Storyboard="{StaticResource MainMenuClose}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid Background="LightGray">
+    <Grid Background="WhiteSmoke">
         <Grid Height="60" VerticalAlignment="Top" Background="#FFFFD100">
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
                 <TextBlock Text="Setting For Admin" VerticalAlignment="Center" FontSize="18" />
@@ -112,7 +112,7 @@
                     <Button Command="{Binding BOnlineCart_Click}" Width="185" Height="60" Background="#FFFFB900">
                         <StackPanel Orientation="Horizontal" Background="#FFFFB900" Width="167">
                             <materialDesign:PackIcon Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="basket" Width="25" Height="25"></materialDesign:PackIcon>
-                            <TextBlock Foreground="Black" Text="Messages" VerticalAlignment="Center" Margin="20 10 "/>
+                            <TextBlock Foreground="Black" Text="Basket" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
 
                     </Button>
