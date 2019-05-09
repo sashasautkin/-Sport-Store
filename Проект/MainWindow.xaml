@@ -61,7 +61,7 @@
     </Window.Triggers>
     <Grid Background="LightGray">
         <Grid Height="60" VerticalAlignment="Top" Background="#FFFFD100">
-            <TextBlock Text="Sport Store Helthy LIFE" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26"  Margin="691,13,126,15" />
+            <TextBlock Text="Pro Store "  FontStyle="Normal" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="26"  Margin="691,13,126,15" />
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
                 <TextBlock Text="Setting" VerticalAlignment="Center" FontSize="18" />
                 <materialDesign:PopupBox   Margin="5" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" >

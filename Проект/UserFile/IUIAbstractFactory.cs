@@ -10,6 +10,6 @@ namespace Проект
     {
         ILoginAndPassword getLoginAndPassword(string login,string password);
         IType getType();
-
+       
     }
 }

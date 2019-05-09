@@ -12,14 +12,26 @@ namespace Проект
     {
         public string Login { get; set; }
         public string Password { get; set; }
-        public int chislo = 0;
+        
        public string UName;
+       // public AutorizationLoginAndPassword peson = null;
+        public AutorizationLoginAndPassword()
+        {
+           
+        }
+        public AutorizationLoginAndPassword(string Login, string Password,string UName)
+        {
+            this.Login = Login;
+            this.Password = Password;
+            this.UName = UName;
+        }
+       
         public AutorizationLoginAndPassword(string login , string password)
         {
             Login = login;
            
             Password = password;
-            Autorization(login, password);
+            Autorization(Login, Password);
 
         }
         public void Autorization(string login,string password)
@@ -38,14 +50,13 @@ namespace Проект
                 if (count == 1)
                 {
 
-                   UName = login;
-                    if (Login == "Admin" || Login == "admin")
+                   
+                    if (login == "Admin" || login == "admin")
                     {
                       
                         MainWindowForAdmin dashboard = new MainWindowForAdmin();
                         dashboard.Show();
-                        chislo = 0;
-                         UName = login;
+                       
                         
                     }
                     else
@@ -53,8 +64,7 @@ namespace Проект
                        
                         MainWindow dashboard = new MainWindow();
                         dashboard.Show();
-                        chislo = 0;
-                        UName = login;
+                        
                     }
                 }
                 else
@@ -62,8 +72,7 @@ namespace Проект
                     MessageBox.Show("Username or password is incorrect");
                     Login = null;
                     Password = null;
-                    chislo = 1;
-                    UName = null;
+                    
 
                 }
 

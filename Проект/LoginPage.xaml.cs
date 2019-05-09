@@ -50,12 +50,14 @@ namespace Проект
 
         }
         static  public string uUName;
+        static public string uPassword; 
         private void BtnSubmit_Click(object sender, RoutedEventArgs e)
         {
            
             if (Sign_on.IsChecked == true)
             {
                 uUName = txtUsername.Text;
+                uPassword = txtPassword.Password;
                 SqlConnection sqlCon = new SqlConnection(@"Data Source=DESKTOP-DP7LGSG;Initial Catalog=LoginDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
                 try
                 {
@@ -100,7 +102,7 @@ namespace Проект
             else
             {
                 uUName = txtUsername.Text;
-              
+                uPassword = txtPassword.Password;
                 SqlConnection sqlCon = new SqlConnection(@"Data Source=DESKTOP-DP7LGSG;Initial Catalog=LoginDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
                 try
                 {
@@ -119,7 +121,7 @@ namespace Проект
                     else
                     {
                         Person.getLoginAndPassword(txtUsername.Text, txtPassword.Password);
-                        this.Close();
+                        
                     }
 
 

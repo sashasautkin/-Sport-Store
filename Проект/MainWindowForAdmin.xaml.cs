@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Проект.ViewModel;
+// static Проект.LoginPage;
 namespace Проект
 {
     
@@ -21,13 +22,18 @@ namespace Проект
     /// </summary>
     public partial class MainWindowForAdmin : Window
     {
+        AutorizationLoginAndPassword person =  null; 
+
         public MainWindowForAdmin()
         {
             InitializeComponent();
-            UserName.Text = LoginPage.uUName;
+           
             DataContext = new MainViewModel();
+            person = new AutorizationLoginAndPassword(LoginPage.uUName,LoginPage.uPassword,LoginPage.uUName);
+            UserName.Text = person.Login;
         }
-        
+     
+       
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
         {
            LoginPage dashboard = new LoginPage();

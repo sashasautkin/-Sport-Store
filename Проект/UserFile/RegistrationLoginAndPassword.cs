@@ -68,8 +68,7 @@ namespace Проект
                                 comand.Parameters.AddWithValue("Password", password);
                                 comand.ExecuteNonQuery();
                                 MessageBox.Show("Ви успішно зареєструвалися");
-                                MainWindow dashboard = new MainWindow();
-                                dashboard.Show();
+                               
 
 
                             }
