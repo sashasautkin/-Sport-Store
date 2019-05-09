@@ -97,8 +97,8 @@
     <Compile Include="Pages\Create.xaml.cs">
       <DependentUpon>Create.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Messages.xaml.cs">
-      <DependentUpon>Messages.xaml</DependentUpon>
+    <Compile Include="Pages\Items.xaml.cs">
+      <DependentUpon>Items.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\OnlineCart.xaml.cs">
       <DependentUpon>OnlineCart.xaml</DependentUpon>
@@ -152,7 +152,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Messages.xaml">
+    <Page Include="Pages\Items.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

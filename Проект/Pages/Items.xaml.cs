@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Проект.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Messages.xaml
+    /// Логика взаимодействия для Items.xaml
     /// </summary>
-    public partial class Messages : Page
+    public partial class Items : Page
     {
-        public Messages()
+        public Items()
         {
             InitializeComponent();
         }

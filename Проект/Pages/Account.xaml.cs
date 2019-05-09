@@ -23,7 +23,12 @@ namespace Проект.Pages
         public Account()
         {
             InitializeComponent();
-            Name.Content = LoginPage.uUName;
+            
+        }
+        public Account(string Name)
+        {
+            InitializeComponent();
+
         }
     }
 }

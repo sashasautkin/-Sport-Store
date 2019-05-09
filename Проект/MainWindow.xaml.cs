@@ -49,5 +49,10 @@ namespace Проект
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
 
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

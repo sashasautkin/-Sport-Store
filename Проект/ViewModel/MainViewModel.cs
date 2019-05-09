@@ -19,11 +19,12 @@ namespace Проект.ViewModel
         private Page Create;
         private Page OnlineCart;
         private Page Messages;
-
+        private Page Items;
+        public IUIAbstractFactory User;
         private Page _currentPage;
         public Page CurrentPage { get { return _currentPage; } set { _currentPage = value; RaisePropertyChanged(() => CurrentPage);  } }
-        private double _frameOpacity;
-        public double FrameOpacity { get { return _frameOpacity; } set {_frameOpacity = value ; } }
+      //  private double _frameOpacity;
+        public double FrameOpacity { get; set ;}
         public MainViewModel()
         {
 
@@ -31,12 +32,30 @@ namespace Проект.ViewModel
             Account = new Pages.Account();
             Create = new Pages.Create();
             OnlineCart = new Pages.OnlineCart();
-            Messages = new Pages.Messages();
+            Items = new Pages.Items();
+           
             FrameOpacity = 1;
             CurrentPage = Welcome;
 
+        }
+     /*   public MainViewModel(IUIAbstractFactory user)
+        {
+            User = user;
+            Welcome = new Pages.Welcome();
+            Account = new Pages.Account();
+            Create = new Pages.Create();
+            OnlineCart = new Pages.OnlineCart();
 
+            FrameOpacity = 1;
+            CurrentPage = Welcome;
 
+        }*/
+         public ICommand BItems_Click
+        {
+            get
+            {
+                return new RelayCommand(() => CurrentPage = Items);
+            }
         }
         public ICommand BWelcome_Click
         {
@@ -51,7 +70,7 @@ namespace Проект.ViewModel
 
             get
             {
-                return new RelayCommand(() => SlowOpacity(Account));
+                return new RelayCommand(() => CurrentPage = Account);
             }
         }
         public ICommand BCreate_Click
@@ -67,17 +86,10 @@ namespace Проект.ViewModel
 
             get
             {
-                return new RelayCommand(() => SlowOpacity(OnlineCart));
+                return new RelayCommand(() => CurrentPage = OnlineCart);
             }
         }
-        public ICommand BMessages_Click
-        {
- 
-            get
-            {
-                return new RelayCommand(() => SlowOpacity(Messages));
-            }
-        }
+      
         private async void SlowOpacity(Page page)
         {
             await Task.Factory.StartNew(() =>
