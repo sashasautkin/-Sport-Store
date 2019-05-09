@@ -25,7 +25,7 @@ namespace Проект
         {
             InitializeComponent();
             UserName.Text = LoginPage.uUName;
-           // DataContext = new MainViewModel();
+            DataContext = new MainViewModel();
         }
         
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)

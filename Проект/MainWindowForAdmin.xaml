@@ -62,11 +62,12 @@
     </Window.Triggers>
     <Grid Background="LightGray">
         <Grid Height="60" VerticalAlignment="Top" Background="#FFFFD100">
+            <Button Width="60" Command="{Binding BCreate_Click}"></Button>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
                 <TextBlock Text="Setting For Admin" VerticalAlignment="Center" FontSize="18" />
                 <materialDesign:PopupBox   Margin="5" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" >
                     <StackPanel Width="150">
-                        <Button Content="Account" Command="{Binding bAccount_Click}"/>
+                        <Button Content="Account" Command="{Binding BAccount_Click}"/>
                         <Button Content="Settings"/>
                         <Button Content="Help"/>
                         <Separator/>
@@ -86,22 +87,22 @@
                     </Button>
                     <TextBlock TextAlignment="Center" x:Name="UserName" Text="Chel" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="26" Foreground="Black" Margin="-126,14,58,102" Width="142" Height="34"/>
                 </Grid>
-                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="Black">
-                    <Button Height="60" Width="175" Background="#FFFFB900">
+                <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="Black">
+                    <Button Command="{Binding BWelcome_Click}" Height="60" Width="175" Background="#FFFFB900">
                         <StackPanel Orientation="Horizontal" Background="#FFFFB900" Width="165" Height="53">
                             <materialDesign:PackIcon HorizontalAlignment="Left" Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="ViewDashboard" Width="25" Height="25"/>
                             <TextBlock Text="Home" Foreground="Black" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
 
                     </Button>
-                    <Button Background="#FFFFB900" Width="175"  Height="60"  >
+                    <Button Command="{Binding BOnlineCart_Click}" Background="#FFFFB900" Width="175"  Height="60"  >
                         <StackPanel Orientation="Horizontal" Background="#FFFFB900" Width="166" >
                             <materialDesign:PackIcon HorizontalAlignment="Left" Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="Ticket"  Width="25" Height="25"/>
                             <TextBlock Text="Tickets" Foreground="Black" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
 
                     </Button>
-                    <Button Width="175" Height="60" Background="#FFFFB900">
+                    <Button Command="{Binding BMessages_Click}" Width="175" Height="60" Background="#FFFFB900">
                         <StackPanel Orientation="Horizontal" Background="#FFFFB900" Width="167">
                             <materialDesign:PackIcon Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="Message" Width="25" Height="25"></materialDesign:PackIcon>
                             <TextBlock Foreground="Black" Text="Messages" VerticalAlignment="Center" Margin="20 10 "/>
@@ -110,7 +111,7 @@
                     </Button>
 
 
-                    <Button Width="175" Background="#FFFFB900" Height="60">
+                    <Button Command="{Binding BCreate_Click}" Width="175" Background="#FFFFB900" Height="60">
                         <StackPanel Background="#FFFFB900" Orientation="Horizontal" HorizontalAlignment="Left" Width="169">
                             <materialDesign:PackIcon Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="Pencil" Width="25" Height="25"></materialDesign:PackIcon>
                             <TextBlock Foreground="Black" Text="Create" VerticalAlignment="Center" Margin="20 10 " Background="#FFFFB900"/>
@@ -123,8 +124,8 @@
 
         </Grid>
 
-        <Grid x:Name="GridMainMenu" HorizontalAlignment="Right" Background="White" VerticalAlignment="Bottom"  Margin="0,0,7,9" Height="522"  Width="804">
-
+        <Grid x:Name="GridMainMenu" HorizontalAlignment="Right" Background="White" VerticalAlignment="Bottom"  Margin="0,0,7,9" Height="522"  Width="985">
+            <Frame Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden" Opacity="{Binding FrameOpacity}" Margin="0,0,0,0"/>
 
 
         </Grid>

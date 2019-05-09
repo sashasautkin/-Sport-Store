@@ -14,5 +14,6 @@ namespace Проект.ViewModel
 {
     class TestViewModel : ViewModelBase
     {
+
     }
 }

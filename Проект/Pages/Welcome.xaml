@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Welcome">
 
-    <Grid>
-        
+    <Grid Background="Orange">
+        <Button Height="Auto" Margin="0,126,0,108">Ramm</Button>
     </Grid>
 </Page>
