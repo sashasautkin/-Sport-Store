@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Проект.Product
 {
-    interface IProduct
+   public  class MyDbContext : DbContext
     {
-        string NameProduct { get; set; }
-        string PersonWhoSellProduct { get; set; }
-        double PriceProduct { get; set; }
-        
+        public MyDbContext() : base("DbConnectionString")
+        {
+        }
     }
 }

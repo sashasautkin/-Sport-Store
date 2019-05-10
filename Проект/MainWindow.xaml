@@ -97,7 +97,7 @@
                     <Button Command="{Binding BItems_Click}" Background="#FFFFB900" Width="185"  Height="60"  >
                         <StackPanel Orientation="Horizontal" Background="#FFFFB900" Width="166" >
                             <materialDesign:PackIcon HorizontalAlignment="Left" Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="Ticket"  Width="25" Height="25"/>
-                            <TextBlock Text="Tickets" Foreground="Black" VerticalAlignment="Center" Margin="20 10 "/>
+                            <TextBlock Text="Items" Foreground="Black" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
 
                     </Button>
