@@ -23,8 +23,8 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="1">
             <Grid Background="WhiteSmoke" Margin="10">
-               
-                <Label HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,690,311" Width="88" RenderTransformOrigin="0.477,0.58"></Label>
+
+                <Label HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,522,311" Width="256" RenderTransformOrigin="0.477,0.58"></Label>
             </Grid>
         </Grid>
         <Grid  Height="77" VerticalAlignment="Top" Background="#673AB7">

@@ -21,18 +21,27 @@ namespace Проект.Pages
     /// <summary>
     /// Логика взаимодействия для Items.xaml
     /// </summary>
-    public partial class Items : Page
+    public partial class Product : Page
     {
         LoginDBEntities db;
-        public Items()
+        public Product()
         {
             InitializeComponent();
         }
-        public Items(string login, string password)
+        public Product(string login, string password)
         {
             InitializeComponent();
-            DataContext = new ViewModel.TestViewModel();
+           // DataContext = new ViewModel.TestViewModel();
             Login.Content = "User" + login;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            InfoProductFromStores.ItemsSource = null;
+            db = new LoginDBEntities();
+          
+            
+            InfoProductFromStores.ItemsSource = db.ProductFromStores.ToList(); 
         }
     }
 }

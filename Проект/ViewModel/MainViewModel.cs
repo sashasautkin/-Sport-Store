@@ -15,46 +15,64 @@ namespace Проект.ViewModel
     class MainViewModel : ViewModelBase
     {
         private Page Welcome;
+        private Page AdminCreate;
+
         private Page Account;
         private Page Create;
         private Page OnlineCart;
-        private Page Messages;
-        private Page Items;
-        public IUIAbstractFactory User;
+        private Page AdminProduct;
+        
+        private Page Product;
         private Page _currentPage;
         public Page CurrentPage { get { return _currentPage; } set { _currentPage = value; RaisePropertyChanged(() => CurrentPage);  } }
-      //  private double _frameOpacity;
+    
         public double FrameOpacity { get; set ;}
         public MainViewModel(string login, string password)
         {
+            AdminProduct = new Pages.AdminProduct(login, password);
+            AdminCreate = new Pages.AdminCreate(login,password);
 
             Welcome = new Pages.Welcome(login, password);
             Account = new Pages.Account(login,password);
             Create = new Pages.Create(login, password);
             OnlineCart = new Pages.OnlineCart(login, password);
-            Items = new Pages.Items(login, password);
+           Product = new Pages.Product(login,password);
            
             FrameOpacity = 1;
             CurrentPage = Welcome;
 
         }
-     /*   public MainViewModel(IUIAbstractFactory user)
-        {
-            User = user;
-            Welcome = new Pages.Welcome();
-            Account = new Pages.Account();
-            Create = new Pages.Create();
-            OnlineCart = new Pages.OnlineCart();
+        /*   public MainViewModel(IUIAbstractFactory user)
+           {
+               User = user;
+               Welcome = new Pages.Welcome();
+               Account = new Pages.Account();
+               Create = new Pages.Create();
+               OnlineCart = new Pages.OnlineCart();
 
-            FrameOpacity = 1;
-            CurrentPage = Welcome;
+               FrameOpacity = 1;
+               CurrentPage = Welcome;
 
-        }*/
-         public ICommand BItems_Click
+           }*/
+        public ICommand BAdminCreate_Click
         {
             get
             {
-                return new RelayCommand(() => CurrentPage = Items);
+                return new RelayCommand(() => CurrentPage = AdminCreate);
+            }
+        }
+        public ICommand BAdminItems_Click
+        {
+            get
+            {
+                return new RelayCommand(() => CurrentPage = AdminProduct);
+            }
+        }
+        public ICommand BItems_Click
+        {
+            get
+            {
+                return new RelayCommand(() => CurrentPage = Product);
             }
         }
         public ICommand BWelcome_Click
@@ -90,7 +108,7 @@ namespace Проект.ViewModel
             }
         }
       
-        private async void SlowOpacity(Page page)
+        /*private async void SlowOpacity(Page page)
         {
             await Task.Factory.StartNew(() =>
             {
@@ -109,7 +127,7 @@ namespace Проект.ViewModel
 
 
             });
-        }
+        }*/
 
 
     }

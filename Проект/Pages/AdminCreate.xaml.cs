@@ -23,14 +23,14 @@ namespace Проект.Pages
     /// <summary>
     /// Логика взаимодействия для Create.xaml
     /// </summary>
-    public partial class Create : Page
+    public partial class AdminCreate : Page
     {
-        public Create()
+        public AdminCreate()
         {
             InitializeComponent();
         }
         AutorizationLoginAndPassword Person = new AutorizationLoginAndPassword(); 
-        public Create(string login, string password)
+        public AdminCreate(string login, string password)
         {
             InitializeComponent();
             DataContext = new ViewModel.TestViewModel();
@@ -58,7 +58,7 @@ namespace Проект.Pages
                 context.SaveChanges();
                 ItemBox.Clear();
                 PriceBox.Clear();
-                MessageBox.Show("Wait , when admin to add your thing to the main list");
+
 
             }
 

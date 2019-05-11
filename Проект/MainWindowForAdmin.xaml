@@ -101,14 +101,22 @@
                         </StackPanel>
 
                     </Button>
-                    
-                    <Button Command="{Binding BCreate_Click}" Width="185" Background="#FFFFB900" Height="60">
+                 
+                    <Button Command="{Binding BAdminItems_Click}" Background="#FFFFB900" Width="185"  Height="60"  >
+                        <StackPanel Orientation="Horizontal" Background="#FFFFB900" Width="166" >
+                            <materialDesign:PackIcon HorizontalAlignment="Left" Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="Ticket"  Width="25" Height="25"/>
+                            <TextBlock Text="AdminItems" Foreground="Black" VerticalAlignment="Center" Margin="20 10 "/>
+                        </StackPanel>
+
+                    </Button>
+                    <Button Command="{Binding BAdminCreate_Click}" Width="185" Background="#FFFFB900" Height="60">
                         <StackPanel Background="#FFFFB900" Orientation="Horizontal" HorizontalAlignment="Left" Width="169">
                             <materialDesign:PackIcon Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="Pencil" Width="25" Height="25"></materialDesign:PackIcon>
                             <TextBlock Foreground="Black" Text="Create" VerticalAlignment="Center" Margin="20 10 " Background="#FFFFB900"/>
                         </StackPanel>
 
                     </Button>
+               
                     <Button Command="{Binding BOnlineCart_Click}" Width="185" Height="60" Background="#FFFFB900">
                         <StackPanel Orientation="Horizontal" Background="#FFFFB900" Width="167">
                             <materialDesign:PackIcon Foreground="Black" Margin="0" VerticalAlignment="Center" Kind="basket" Width="25" Height="25"></materialDesign:PackIcon>
