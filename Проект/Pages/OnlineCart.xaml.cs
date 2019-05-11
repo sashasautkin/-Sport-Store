@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Data.SqlClient;
+using System.Data;
 namespace Проект.Pages
 {
     /// <summary>
@@ -23,6 +24,13 @@ namespace Проект.Pages
         public OnlineCart()
         {
             InitializeComponent();
+        }
+        public OnlineCart(string login, string password)
+        {
+            InitializeComponent();
+            DataContext = new ViewModel.TestViewModel();
+            Login.Content = "User" + login;
+
         }
     }
 }

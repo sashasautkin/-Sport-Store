@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
+using Проект.DataContext;
 
 namespace Проект.Pages
 {
@@ -20,9 +23,16 @@ namespace Проект.Pages
     /// </summary>
     public partial class Items : Page
     {
+        LoginDBEntities db;
         public Items()
         {
             InitializeComponent();
+        }
+        public Items(string login, string password)
+        {
+            InitializeComponent();
+            DataContext = new ViewModel.TestViewModel();
+            Login.Content = "User" + login;
         }
     }
 }

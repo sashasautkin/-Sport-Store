@@ -17,6 +17,23 @@
       Title="Items">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="373*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid Background="WhiteSmoke" Margin="10">
+
+                <Label  HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,690,311" Width="88" RenderTransformOrigin="0.477,0.58"></Label>
+                <Grid> 
+                    <DataGrid x:Name="InfoProductFromStores" HorizontalAlignment="Left" Height="144" Margin="4,45,0,0" VerticalAlignment="Top" Width="766">
+                    <DataGridTextColumn Binding="{Binding ProductName}" Header="Product"/>
+                    <DataGridTextColumn Binding="{Binding ProductName}" Header="Product"/>
+                        <DataGridTextColumn Binding="{Binding Id}" Header="Product Number"/>
+                    </DataGrid>
+                </Grid>
+            </Grid>
+        </Grid>
         <Grid Height="77" VerticalAlignment="Top" Background="#673AB7">
             <materialDesign:PackIcon RenderTransformOrigin="2.32,0.542" Margin="28,16,0,20" VerticalAlignment="Center" Kind="Ticket" Width="25" Height="25"/>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="30" Margin="72,0,268,1">Here, you can buy something</TextBlock>

@@ -25,14 +25,14 @@ namespace Проект.ViewModel
         public Page CurrentPage { get { return _currentPage; } set { _currentPage = value; RaisePropertyChanged(() => CurrentPage);  } }
       //  private double _frameOpacity;
         public double FrameOpacity { get; set ;}
-        public MainViewModel()
+        public MainViewModel(string login, string password)
         {
 
-            Welcome = new Pages.Welcome();
-            Account = new Pages.Account();
-            Create = new Pages.Create();
-            OnlineCart = new Pages.OnlineCart();
-            Items = new Pages.Items();
+            Welcome = new Pages.Welcome(login, password);
+            Account = new Pages.Account(login,password);
+            Create = new Pages.Create(login, password);
+            OnlineCart = new Pages.OnlineCart(login, password);
+            Items = new Pages.Items(login, password);
            
             FrameOpacity = 1;
             CurrentPage = Welcome;

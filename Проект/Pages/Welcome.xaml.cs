@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Проект.Pages
 {
@@ -23,6 +25,12 @@ namespace Проект.Pages
         public Welcome()
         {
             InitializeComponent();
+        }
+        public Welcome(string login, string password)
+        {
+            InitializeComponent();
+            DataContext = new ViewModel.TestViewModel();
+            Login.Content = "User" + login;
         }
     }
 }

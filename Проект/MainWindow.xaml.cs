@@ -28,7 +28,7 @@ namespace Проект
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            DataContext = new MainViewModel(LoginPage.uUName,LoginPage.uPassword);
             person = new AutorizationLoginAndPassword(LoginPage.uUName, LoginPage.uPassword, LoginPage.uUName);
             UserName.Text = person.Login;
         }

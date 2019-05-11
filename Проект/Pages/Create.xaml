@@ -17,9 +17,28 @@
       Title="Create">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="373*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid Background="WhiteSmoke" Margin="10">
+
+                <Label HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,466,311" Width="312" RenderTransformOrigin="0.477,0.58"></Label>
+                <StackPanel Margin="-9,51,0,0">
+                    <Label FontSize="15">If Admin add your item in store , other peaple can buy it</Label>
+                    <Label FontSize="30">Name Item :</Label>
+                    <TextBox x:Name="ItemBox" Background="#673AB7" Foreground="White" Width="300" Margin="26,0,463,0"></TextBox>
+                    <Label FontSize="30">Price :</Label>
+                    <TextBox  x:Name="PriceBox" Background="#673AB7" Foreground="White" Width="300" Margin="26,0,463,0"/>
+                </StackPanel>
+                <Button FontSize="20" Click="AddItem" Content="Send" VerticalAlignment="Bottom" Width="300" Margin="17,0,463,86" Height="29" RenderTransformOrigin="0.508,1.169"/>
+
+            </Grid>
+        </Grid>
         <Grid Height="77" VerticalAlignment="Top" Background="#673AB7">
             <materialDesign:PackIcon RenderTransformOrigin="2.32,0.542" Margin="28,16,0,20"  VerticalAlignment="Center" Kind="Create" Width="25" Height="25"/>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="30" Margin="72,0,268,1">Here, you can create new Item </TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="30" Margin="72,0,268,1">Here, you can create new Item</TextBlock>
         </Grid>
 
 
