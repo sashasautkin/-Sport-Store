@@ -32,7 +32,12 @@ namespace Проект.Pages
         {
             InitializeComponent();
             DataContext = new ViewModel.TestViewModel();
-            Login.Content = "User" + login;
+            Login.Content = "User:" + login;
+            passwordLable.Content = "Password:" + password; 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

@@ -24,10 +24,10 @@
         <Grid Grid.Row="1">
             <Grid Background="WhiteSmoke" Margin="10">
 
-                <Label  HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,690,311" Width="88" RenderTransformOrigin="0.477,0.58"></Label>
+                <Label  HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,467,311" Width="311" RenderTransformOrigin="0.477,0.58"></Label>
                 <Grid  >
 
-                    <DataGrid SelectionMode="Single"   Name="InfoProductFromStores" HorizontalAlignment="Left" Height="295" Margin="10,45,0,0" VerticalAlignment="Top" Width="305">
+                    <DataGrid SelectionMode="Single"   Name="InfoProductFromStores" HorizontalAlignment="Left" Height="298" Margin="10,45,0,0" VerticalAlignment="Top" Width="302">
 
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding UserName}" Header="UserName"/>
