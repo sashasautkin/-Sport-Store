@@ -11,7 +11,7 @@ namespace Проект
         public string Type { get; set; }
         public RegistrationType()
         {
-            Type = "Registration";
+            Type = "Registrate";
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Проект
         public AutorizationType()
         {
 
-            Type = "Autorization";
+            Type = "Autorizate";
 
         }
     }
