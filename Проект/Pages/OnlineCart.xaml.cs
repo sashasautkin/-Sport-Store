@@ -24,13 +24,11 @@ namespace Проект.Pages
     public partial class OnlineCart : Page
     {
         LoginDBEntities dbcustomer;
-        LoginDBEntities dbbasket;
         LoginDBEntities db = new LoginDBEntities();
         public OnlineCart()
         {
             InitializeComponent();
-        }
-        
+        }        
         AutorizationLoginAndPassword person = new AutorizationLoginAndPassword();
         public OnlineCart(string login, string password)
         {
@@ -39,19 +37,13 @@ namespace Проект.Pages
             Login.Content = "User: " + login;
             person.Login = login;
             person.Password = password;
-
         }
 
         private void Winows_load(object sender, RoutedEventArgs e)
         {
-            InfoProductCustomer.ItemsSource = null;
-           
+            InfoProductCustomer.ItemsSource = null;           
             dbcustomer = new LoginDBEntities();
-           
-
-            InfoProductCustomer.ItemsSource = dbcustomer.tableCustomers.ToList();
-
-           
+            InfoProductCustomer.ItemsSource = dbcustomer.tableCustomers.ToList();           
         }
     }
 }

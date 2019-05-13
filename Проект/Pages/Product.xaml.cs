@@ -29,21 +29,16 @@ namespace Проект.Pages
             InitializeComponent();
         }
         string login;
-        string password;
         public Product(string login, string password)
         {
             InitializeComponent();
-           // DataContext = new ViewModel.TestViewModel();
             Login.Content = "User: " + login;
             this.login = login;
         }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             InfoProductFromStores.ItemsSource = null;
-            db = new LoginDBEntities();
-          
-            
+            db = new LoginDBEntities();            
             InfoProductFromStores.ItemsSource = db.ProductFromStores.ToList(); 
         }
 
@@ -55,11 +50,9 @@ namespace Проект.Pages
             {
                 var product = new tableCustomer()
                 {
-
                     UserName = login,
                     ProductName = Product1.Text,
                     Price = price
-
                 };
                 context.tableCustomers.Add(product);
                 context.SaveChanges();

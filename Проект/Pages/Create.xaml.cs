@@ -42,27 +42,33 @@ namespace Проект.Pages
 
         private void AddItem(object sender, RoutedEventArgs e)
         {
-            float price = 0;
-            price = Convert.ToUInt64(PriceBox.Text);
-            using (var context = new LoginDBEntities())
+            if (ItemBox.Text !="" || PriceBox.Text !="" )
             {
-                var product = new ProductFromPeople()
+                float price = 0;
+                price = Convert.ToUInt64(PriceBox.Text);
+                using (var context = new LoginDBEntities())
                 {
-                    
-                    UserName = Person.Login,
-                    ProductName = ItemBox.Text,
-                    Price = price 
+                    var product = new ProductFromPeople()
+                    {
 
-                };
-                context.ProductFromPeoples.Add(product);
-                context.SaveChanges();
-                ItemBox.Clear();
-                PriceBox.Clear();
-                MessageBox.Show("Wait , when admin to add your thing to the main list");
+                        UserName = Person.Login,
+                        ProductName = ItemBox.Text,
+                        Price = price
+
+                    };
+                    context.ProductFromPeoples.Add(product);
+                    context.SaveChanges();
+                    ItemBox.Clear();
+                    PriceBox.Clear();
+                    MessageBox.Show("Wait , when admin to add your thing to the main list");
+
+                }
 
             }
-
-        
-    }
+            else
+            {
+                MessageBox.Show("Incorrect");
+            }
+        }
     }
 }

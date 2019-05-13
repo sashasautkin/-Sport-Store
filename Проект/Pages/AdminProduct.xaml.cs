@@ -75,23 +75,31 @@ namespace Проект.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            using (LoginDBEntities db = new LoginDBEntities())
+            if (UserName.Text != "" || Product.Text != "" || Price.Text != "")
             {
-                float price = Convert.ToUInt64(Price.Text);
-                ProductFromPeople p1 = new ProductFromPeople {UserName = UserName.Text, ProductName = Product.Text, Price =price }; 
-                p1 = db.ProductFromPeoples.FirstOrDefault();
-                if(p1.ProductName != null)
+                using (LoginDBEntities db = new LoginDBEntities())
                 {
-                    db.Entry(p1).State = System.Data.Entity.EntityState.Deleted;
-                    db.SaveChanges();
+                    float price = Convert.ToUInt64(Price.Text);
+                    ProductFromPeople p1 = new ProductFromPeople { UserName = UserName.Text, ProductName = Product.Text, Price = price };
+                    p1 = db.ProductFromPeoples.FirstOrDefault();
+                    if (p1.ProductName != null)
+                    {
+                        db.Entry(p1).State = System.Data.Entity.EntityState.Deleted;
+                        db.SaveChanges();
+                    }
                 }
+                UserName.Text = "";
+                Product.Text = "";
+                Price.Text = "";
             }
-
+            else
+            {
+                MessageBox.Show("Incorrect");
+            }
         }
 
         private void InfoProductFromPeople_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-        
+        {      
         }
     }
 }

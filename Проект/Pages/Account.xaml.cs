@@ -25,8 +25,7 @@ namespace Проект.Pages
         public Account()
         {
             InitializeComponent();
-            DataContext = new ViewModel.TestViewModel();
-            
+            DataContext = new ViewModel.TestViewModel();            
         }
         AutorizationLoginAndPassword person = new AutorizationLoginAndPassword();
         public Account(string login ,string password)
@@ -37,8 +36,6 @@ namespace Проект.Pages
             person.Password = password;
             Login.Content = "User: " + person.Login;
             passwordLable.Content = "Password: " + person.Password; 
-        }
-
-       
+        }       
     }
 }

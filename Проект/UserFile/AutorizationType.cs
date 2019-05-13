@@ -11,9 +11,7 @@ namespace Проект
         public string Type { get; set; }
         public AutorizationType()
         {
-
             Type = "Autorizate";
-
         }
     }
 }

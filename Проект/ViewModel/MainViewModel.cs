@@ -16,44 +16,27 @@ namespace Проект.ViewModel
     {
         private Page Welcome;
         private Page AdminCreate;
-
         private Page Account;
         private Page Create;
         private Page OnlineCart;
-        private Page AdminProduct;
-        
+        private Page AdminProduct;        
         private Page Product;
         private Page _currentPage;
         public Page CurrentPage { get { return _currentPage; } set { _currentPage = value; RaisePropertyChanged(() => CurrentPage);  } }
-    
         public double FrameOpacity { get; set ;}
         public MainViewModel(string login, string password)
         {
             AdminProduct = new Pages.AdminProduct(login, password);
             AdminCreate = new Pages.AdminCreate(login,password);
-
             Welcome = new Pages.Welcome(login, password);
             Account = new Pages.Account(login,password);
             Create = new Pages.Create(login, password);
             OnlineCart = new Pages.OnlineCart(login, password);
-           Product = new Pages.Product(login,password);
-           
+            Product = new Pages.Product(login,password);           
             FrameOpacity = 1;
             CurrentPage = Welcome;
 
         }
-        /*   public MainViewModel(IUIAbstractFactory user)
-           {
-               User = user;
-               Welcome = new Pages.Welcome();
-               Account = new Pages.Account();
-               Create = new Pages.Create();
-               OnlineCart = new Pages.OnlineCart();
-
-               FrameOpacity = 1;
-               CurrentPage = Welcome;
-
-           }*/
         public ICommand BAdminCreate_Click
         {
             get
@@ -106,29 +89,6 @@ namespace Проект.ViewModel
             {
                 return new RelayCommand(() => CurrentPage = OnlineCart);
             }
-        }
-      
-        /*private async void SlowOpacity(Page page)
-        {
-            await Task.Factory.StartNew(() =>
-            {
-                for( double i = 1.0; i> 0.0;i-=0.1)
-                {
-                    FrameOpacity = i;
-                    Thread.Sleep(50);
-                }
-                CurrentPage = page;
-                for(double i = 0.0; i <1.1; i+=0.1 )
-                {
-                    FrameOpacity = i;
-                    Thread.Sleep(50);
-
-                }
-
-
-            });
-        }*/
-
-
+        }    
     }
 }

@@ -39,30 +39,32 @@ namespace Проект.Pages
             Person.Password = password;
 
         }
-
         private void AddItem(object sender, RoutedEventArgs e)
         {
-            float price = 0;
-            price = Convert.ToUInt64(PriceBox1.Text);
-            using (var context = new LoginDBEntities())
+            if (ItemBox1.Text != "" || PriceBox1.Text != "")
             {
-                var product = new ProductFromStore()
+                float price = 0;
+                price = Convert.ToUInt64(PriceBox1.Text);
+                using (var context = new LoginDBEntities())
                 {
-                    
-                    UserName = Person.Login,
-                    ProductName = ItemBox1.Text,
-                    Price = price 
-
-                };
-                context.ProductFromStores.Add(product);
-                context.SaveChanges();
-                ItemBox1.Clear();
-                PriceBox1.Clear();
-
-
+                    var product = new ProductFromStore()
+                    {
+                        UserName = Person.Login,
+                        ProductName = ItemBox1.Text,
+                        Price = price
+                    };
+                    context.ProductFromStores.Add(product);
+                    context.SaveChanges();
+                    ItemBox1.Clear();
+                    PriceBox1.Clear();
+                }
+                ItemBox1.Text = "";
+                PriceBox1.Text = "";
             }
-
-        
-    }
+            else
+            {
+                MessageBox.Show("Incorrect");
+            }
+        }
     }
 }

@@ -12,11 +12,9 @@ namespace Проект
         {
             return new AutorizationLoginAndPassword(login,password);
         }
-
         public IType getType()
         {
             return new AutorizationType();
-        }
-        
+        }        
     }
 }

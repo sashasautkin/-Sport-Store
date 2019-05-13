@@ -21,39 +21,25 @@ namespace Проект
     /// </summary>
     public partial class LoginPage : Window
     {
-
-
         public string Title1
         {
             get { return (string)GetValue(Title1Property); } //(string)GetValue(Title1Property)
             set { SetValue(Title1Property, value); }
-
         }
         public static readonly DependencyProperty Title1Property =
-         DependencyProperty.Register("Title1", typeof(string), typeof(LoginPage));
-
-       
-
-
-
+        DependencyProperty.Register("Title1", typeof(string), typeof(LoginPage));
         IUIAbstractFactory Person = null;
-
         public LoginPage()
         {
             InitializeComponent();
             txtUsername.Focus();
-
             Person = new AutorizationFactory();
-            Title1 = Person.getType().Type;
-            
-
-
+            Title1 = Person.getType().Type; 
         }
         static  public string uUName;
         static public string uPassword; 
         private void BtnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-           
+        {           
             if (Sign_on.IsChecked == true)
             {
                 uUName = txtUsername.Text;
@@ -76,28 +62,17 @@ namespace Проект
                     }
                     else
                     {
-                        MessageBox.Show("Username or password is incorrect");
-                       
-
+                        MessageBox.Show("Username or password is incorrect");                     
                     }
-
                 }
                 catch (Exception ex)
                 {
-
                     MessageBox.Show(ex.Message);
                 }
                 finally
                 {
                     sqlCon.Close();
-
-                }
-
-               
-               
-               
-                
-
+                }         
             }
             else
             {
@@ -115,50 +90,33 @@ namespace Проект
                     int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                     if (count == 1)
                     {
-                        MessageBox.Show("This Account exists");
-                       
+                        MessageBox.Show("This Account exists");                       
                     }
                     else
                     {
-                        Person.getLoginAndPassword(txtUsername.Text, txtPassword.Password);
-                        
+                        Person.getLoginAndPassword(txtUsername.Text, txtPassword.Password);                        
                     }
-
-
                 }
                 catch (Exception ex)
                 {
-
                     MessageBox.Show(ex.Message);
                 }
                 finally
                 {
                     sqlCon.Close();
-
-                }
-
-
-
-                
-
-
+                }          
             }
         }
-
         private void Sign_up_Checked(object sender, RoutedEventArgs e)
         {
             Person = new RegistrationFactory();
-            Title1 = Person.getType().Type;
-            
+            Title1 = Person.getType().Type;            
         }
-
         private void Sign_on_Checked(object sender, RoutedEventArgs e)
         {
             Person = new AutorizationFactory();
             Title1 = Person.getType().Type;
-
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

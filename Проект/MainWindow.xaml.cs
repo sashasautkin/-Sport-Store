@@ -32,16 +32,12 @@ namespace Проект
             person = new AutorizationLoginAndPassword(LoginPage.uUName, LoginPage.uPassword, LoginPage.uUName);
             UserName.Text = person.Login;
         }
-
-       
-
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
         {
            LoginPage dashboard = new LoginPage();
             dashboard.Show();
             this.Close();
         }
-
         private void ButtonOpenMenu_Click(object sender,RoutedEventArgs e)
         {
            ButtonOpenMenu.Visibility = Visibility.Collapsed;
@@ -51,12 +47,10 @@ namespace Проект
         {
             ButtonOpenMenu.Visibility = Visibility.Visible;
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
-
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-
         }
     }
 }

@@ -9,7 +9,6 @@ namespace Проект
     interface IUIAbstractFactory
     {
         ILoginAndPassword getLoginAndPassword(string login,string password);
-        IType getType();
-       
+        IType getType();       
     }
 }

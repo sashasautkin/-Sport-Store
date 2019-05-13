@@ -13,11 +13,7 @@ namespace Проект
     {
         public string Login { get; set; }
         public string Password { get; set; }
-        public string UName;
-        
-        
-
-
+        public string UName; 
         public  RegistrationLoginAndPassword(string login,string password)
         {
             Login = login;
@@ -38,8 +34,7 @@ namespace Проект
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
                 {
-                    MessageBox.Show("This Account exists");
-                    
+                    MessageBox.Show("This Account exists");                    
                     Login = null;
                     Password = null;
                     UName = null;
@@ -50,53 +45,33 @@ namespace Проект
                     {
                         connection.Open();
                         SqlDataAdapter dt = new SqlDataAdapter("select count (*) From tableUser where UserName = ' " + login + "'AND Password = '" + password + "'", connection);
-
                         DataTable table = new DataTable();
                         dt.Fill(table);
-
-
-
                         if (table.Rows[0][0].ToString() == "0")
                         {
                             if ((login != "") || (password != ""))
-                            {
-                               
-
+                            {                             
                                 UName = login;
                                 SqlCommand comand = new SqlCommand("INSERT Into tableUser (UserName,Password) Values(@UserName,@Password)", connection);
                                 comand.Parameters.AddWithValue("UserName", login);
                                 comand.Parameters.AddWithValue("Password", password);
                                 comand.ExecuteNonQuery();
-                                MessageBox.Show("You are registrated");
-                               
-
-
+                                MessageBox.Show("You are registrated");                             
                             }
-                           
-
-
-                        }
-                        
+                        }                  
                     }
                 }
-
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
             finally
             {
                 sqlCon.Close();
-
             }
-
-
-        }
-
         }
     }
+}
 
 

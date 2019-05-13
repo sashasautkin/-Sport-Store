@@ -25,9 +25,7 @@ namespace Проект
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
                 {
-                    MessageBox.Show("This Account exists");
-
-                    
+                    MessageBox.Show("This Account exists");                    
                 }
                 else
                 {
@@ -35,50 +33,31 @@ namespace Проект
                     {
                         connection.Open();
                         SqlDataAdapter dt = new SqlDataAdapter("select count (*) From tableUser where UserName = ' " + text + "'AND Password = '" + password + "'", connection);
-
                         DataTable table = new DataTable();
                         dt.Fill(table);
-
-
-
                         if (table.Rows[0][0].ToString() == "0")
                         {
                             if ((text != "") || (password != ""))
-                            {
-
-
-                               
+                            {                              
                                 SqlCommand comand = new SqlCommand("INSERT Into tableUser (UserName,Password) Values(@UserName,@Password)", connection);
                                 comand.Parameters.AddWithValue("UserName", text);
                                 comand.Parameters.AddWithValue("Password", password);
                                 comand.ExecuteNonQuery();
                                 MessageBox.Show("Ви успішно зареєструвалися");
-
-
-
                             }
-
-
-
                         }
-
                     }
                 }
-
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
             finally
             {
                 sqlCon.Close();
-
             }
         }
-
         public ILoginAndPassword getLoginAndPassword(string login, string password)
         {
             return new RegistrationLoginAndPassword(login,password);

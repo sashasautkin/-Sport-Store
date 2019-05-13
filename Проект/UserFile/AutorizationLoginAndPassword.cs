@@ -11,13 +11,11 @@ namespace Проект
     class AutorizationLoginAndPassword : ILoginAndPassword
     {
         public string Login { get; set; }
-        public string Password { get; set; }
-        
-       public string UName;
+        public string Password { get; set; }        
+        public string UName;
        // public AutorizationLoginAndPassword peson = null;
         public AutorizationLoginAndPassword()
-        {
-           
+        {           
         }
         public AutorizationLoginAndPassword(string Login, string Password,string UName)
         {
@@ -28,11 +26,9 @@ namespace Проект
        
         public AutorizationLoginAndPassword(string login , string password)
         {
-            Login = login;
-           
+            Login = login;           
             Password = password;
             Autorization(Login, Password);
-
         }
         public void Autorization(string login,string password)
         {
@@ -48,23 +44,16 @@ namespace Проект
                 sqlCmd.Parameters.AddWithValue("@Password",password);
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
-                {
-
-                   
+                {                   
                     if (login == "Admin" || login == "admin")
-                    {
-                      
+                    {                      
                         MainWindowForAdmin dashboard = new MainWindowForAdmin();
-                        dashboard.Show();
-                       
-                        
+                        dashboard.Show();                  
                     }
                     else
-                    {
-                       
+                    {                       
                         MainWindow dashboard = new MainWindow();
-                        dashboard.Show();
-                        
+                        dashboard.Show();                        
                     }
                 }
                 else
@@ -72,20 +61,15 @@ namespace Проект
                     MessageBox.Show("Username or password is incorrect");
                     Login = null;
                     Password = null;
-                    
-
                 }
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
             finally
             {
                 sqlCon.Close();
-
             }
         }
     }
