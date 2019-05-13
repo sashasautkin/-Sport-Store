@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
+using Проект.DataContext;
+
 namespace Проект.Pages
 {
     /// <summary>
@@ -21,6 +23,8 @@ namespace Проект.Pages
     /// </summary>
     public partial class OnlineCart : Page
     {
+        LoginDBEntities dbcustomer;
+        LoginDBEntities dbbasket;
         public OnlineCart()
         {
             InitializeComponent();
@@ -29,8 +33,23 @@ namespace Проект.Pages
         {
             InitializeComponent();
             DataContext = new ViewModel.TestViewModel();
-            Login.Content = "User" + login;
+            Login.Content = "User: " + login;
 
+        }
+
+        private void Winows_load(object sender, RoutedEventArgs e)
+        {
+            InfoProductCustomer.ItemsSource = null;
+            dbcustomer = new LoginDBEntities();
+
+
+            InfoProductCustomer.ItemsSource = dbcustomer.tableCustomers.ToList();
+
+            InfoProductBasket.ItemsSource = null;
+            dbbasket = new LoginDBEntities();
+
+
+            InfoProductBasket.ItemsSource = dbbasket.tableBaskets.ToList();
         }
     }
 }

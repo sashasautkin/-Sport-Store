@@ -67,7 +67,7 @@ namespace Проект
                                 comand.Parameters.AddWithValue("UserName", login);
                                 comand.Parameters.AddWithValue("Password", password);
                                 comand.ExecuteNonQuery();
-                                MessageBox.Show("Ви успішно зареєструвалися");
+                                MessageBox.Show("You are registrated");
                                
 
 

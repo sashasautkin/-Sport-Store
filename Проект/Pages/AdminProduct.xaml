@@ -27,7 +27,7 @@
                 <Label  HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,690,311" Width="88" RenderTransformOrigin="0.477,0.58"></Label>
                 <Grid  >
 
-                    <DataGrid SelectionMode="Single"   Name="InfoProductFromPeople" HorizontalAlignment="Left" Height="290" Margin="10,45,0,0" VerticalAlignment="Top" Width="305">
+                    <DataGrid SelectionMode="Single" AutoGenerateColumns="False"   Name="InfoProductFromPeople" HorizontalAlignment="Left" Height="290" Margin="10,45,0,0" VerticalAlignment="Top" Width="305">
 
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding UserName}" Header="UserName"/>

@@ -30,7 +30,7 @@ namespace Проект.Pages
         {
             InitializeComponent();
             DataContext = new ViewModel.TestViewModel();
-            Login.Content = "User" + login;
+            Login.Content = "User: " + login;
         }
     }
 }

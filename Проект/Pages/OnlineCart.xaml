@@ -14,7 +14,7 @@
       xmlns:local="clr-namespace:Проект.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OnlineCart">
+      Title="OnlineCart" Loaded="Winows_load">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,6 +25,20 @@
             <Grid Background="WhiteSmoke" Margin="10">
 
                 <Label HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,522,311" Width="256" RenderTransformOrigin="0.477,0.58"></Label>
+                <DataGrid  SelectionMode="Single" HorizontalAlignment="Left" Name="InfoProductCustomer" AutoGenerateColumns="False" Height="142" Margin="8,51,0,0" VerticalAlignment="Top" Width="444">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding UserName}" Header="UserName"/>
+                        <DataGridTextColumn Binding="{Binding ProductName}" Header="ProductName"/>
+                        <DataGridTextColumn Binding="{Binding Price}" Header="Price"/>
+                      </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid  SelectionMode="Single" HorizontalAlignment="Left" Name="InfoProductBasket" AutoGenerateColumns="False" Height="103" Margin="6,206,0,0" VerticalAlignment="Top" Width="444">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding UserName}" Header="UserName"/>
+                        <DataGridTextColumn Binding="{Binding Sum}" Header="Sum"/>
+                       
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
         <Grid  Height="77" VerticalAlignment="Top" Background="#673AB7">
