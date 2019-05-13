@@ -28,9 +28,7 @@
                 <StackPanel Margin="-9,51,0,0">
                     <Label FontSize="15">Here, you can rewrite your password</Label>
                     <Label x:Name="passwordLable" Content="pasword" FontSize="30"></Label>
-                    <TextBox HorizontalContentAlignment="Center"  x:Name="PasswordBox" Background="#673AB7" Foreground="White" Width="300" Margin="26,0,463,0"/>
                 </StackPanel>
-                <Button FontSize="20" Click="Button_Click" Content="Rewrite" VerticalAlignment="Bottom" Width="300" Margin="17,0,463,86" Height="29" RenderTransformOrigin="0.508,1.169"/>
 
             </Grid>
         </Grid>

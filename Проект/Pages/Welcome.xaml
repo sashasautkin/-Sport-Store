@@ -25,6 +25,9 @@
             <Grid Background="WhiteSmoke" Margin="10">
 
                 <Label HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,554,311" Width="224" RenderTransformOrigin="0.477,0.58"></Label>
+                <Grid Margin="5,55,0,0">
+                    <TextBlock FontSize="20">Hello, here you can buy somethig intresting,and you can sell own things </TextBlock>
+                </Grid>
             </Grid>
         </Grid>
         <Grid Height="77" VerticalAlignment="Top" Background="#673AB7">

@@ -28,17 +28,17 @@ namespace Проект.Pages
             DataContext = new ViewModel.TestViewModel();
             
         }
+        AutorizationLoginAndPassword person = new AutorizationLoginAndPassword();
         public Account(string login ,string password)
         {
             InitializeComponent();
             DataContext = new ViewModel.TestViewModel();
-            Login.Content = "User: " + login;
-            passwordLable.Content = "Password: " + password; 
+            person.Login = login;
+            person.Password = password;
+            Login.Content = "User: " + person.Login;
+            passwordLable.Content = "Password: " + person.Password; 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }
