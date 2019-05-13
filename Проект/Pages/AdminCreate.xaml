@@ -28,9 +28,9 @@
                 <StackPanel Margin="-9,51,0,0">
                     <Label FontSize="15">If Admin add your item in store , other peaple can buy it</Label>
                     <Label FontSize="30">Name Item :</Label>
-                    <TextBox HorizontalContentAlignment="Center" x:Name="ItemBox" Background="#673AB7" Foreground="White" Width="300" Margin="26,0,463,0"></TextBox>
+                    <TextBox HorizontalContentAlignment="Center" x:Name="ItemBox1" Background="#673AB7" Foreground="White" Width="300" Margin="26,0,463,0"></TextBox>
                     <Label FontSize="30">Price :</Label>
-                    <TextBox HorizontalContentAlignment="Center" x:Name="PriceBox" Background="#673AB7" Foreground="White" Width="300" Margin="26,0,463,0"/>
+                    <TextBox HorizontalContentAlignment="Center" x:Name="PriceBox1" Background="#673AB7" Foreground="White" Width="300" Margin="26,0,463,0"/>
                 </StackPanel>
                 <Button FontSize="20" Click="AddItem" Content="Send" VerticalAlignment="Bottom" Width="300" Margin="17,0,463,86" Height="29" RenderTransformOrigin="0.508,1.169"/>
 

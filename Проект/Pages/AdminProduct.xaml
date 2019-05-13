@@ -27,7 +27,7 @@
                 <Label  HorizontalAlignment="Center" FontSize="30" Content="Login" x:Name="Login" Margin="2,-2,690,311" Width="88" RenderTransformOrigin="0.477,0.58"></Label>
                 <Grid  >
 
-                    <DataGrid SelectionMode="Single" AutoGenerateColumns="False"   Name="InfoProductFromPeople" HorizontalAlignment="Left" Height="290" Margin="10,45,0,0" VerticalAlignment="Top" Width="305">
+                    <DataGrid SelectionMode="Single" AutoGenerateColumns="False"   x:Name="InfoProductFromPeople" HorizontalAlignment="Left" Height="290" Margin="10,45,0,0" VerticalAlignment="Top" Width="305" MouseDoubleClick="InfoProductFromPeople_MouseDoubleClick">
 
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding UserName}" Header="UserName"/>
@@ -36,6 +36,19 @@
                             <DataGridTextColumn Binding="{Binding Id}" Header="Id"/>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Grid Margin="333,24,0,0">
+                        <StackPanel>
+                            <Label Content="UserName" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88"/>
+                            <TextBox Name="UserName"></TextBox>
+                            <Label Content="Product" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="88"/>
+                            <TextBox Name="Product"></TextBox>
+                            <Label Content="Price" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88"/>
+                            <TextBox Name="Price"></TextBox>
+                            <Button Click="Add_in_Main_list" Content="Add in Main list"/>
+                            <Button Content="Delete" Click="Button_Click" />
+
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

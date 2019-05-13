@@ -33,9 +33,19 @@
                             <DataGridTextColumn Binding="{Binding UserName}" Header="UserName"/>
                             <DataGridTextColumn Binding="{Binding ProductName}" Header="ProductName"/>
                             <DataGridTextColumn Binding="{Binding Price}" Header="Price"/>
-                            <DataGridTextColumn Binding="{Binding Id}" Header="Id"/>
+                            
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Grid Margin="333,24,0,0">
+                        <StackPanel>
+                           
+                            <Label Content="Product" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="88"/>
+                            <TextBox Name="Product1"></TextBox>
+                            <Label Content="Price" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88"/>
+                            <TextBox Name="Price"></TextBox>
+                            <Button Content="Buy" Click="Button_Click"/>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

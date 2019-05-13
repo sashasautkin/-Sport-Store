@@ -28,11 +28,14 @@ namespace Проект.Pages
         {
             InitializeComponent();
         }
+        string login;
+        string password;
         public Product(string login, string password)
         {
             InitializeComponent();
            // DataContext = new ViewModel.TestViewModel();
             Login.Content = "User: " + login;
+            this.login = login;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -42,6 +45,29 @@ namespace Проект.Pages
           
             
             InfoProductFromStores.ItemsSource = db.ProductFromStores.ToList(); 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            float price = 0;
+            price = Convert.ToUInt64(Price.Text);
+            using (var context = new LoginDBEntities())
+            {
+                var product = new tableCustomer()
+                {
+
+                    UserName = login,
+                    ProductName = Product1.Text,
+                    Price = price
+
+                };
+                context.tableCustomers.Add(product);
+                context.SaveChanges();
+               
+                Product1.Clear();
+                Price.Clear();
+                MessageBox.Show("You buy it!!");
+            }
         }
     }
 }

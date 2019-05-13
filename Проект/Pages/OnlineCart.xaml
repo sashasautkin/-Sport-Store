@@ -32,13 +32,6 @@
                         <DataGridTextColumn Binding="{Binding Price}" Header="Price"/>
                       </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid  SelectionMode="Single" HorizontalAlignment="Left" Name="InfoProductBasket" AutoGenerateColumns="False" Height="103" Margin="6,206,0,0" VerticalAlignment="Top" Width="444">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding UserName}" Header="UserName"/>
-                        <DataGridTextColumn Binding="{Binding Sum}" Header="Sum"/>
-                       
-                    </DataGrid.Columns>
-                </DataGrid>
             </Grid>
         </Grid>
         <Grid  Height="77" VerticalAlignment="Top" Background="#673AB7">

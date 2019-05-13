@@ -43,21 +43,21 @@ namespace Проект.Pages
         private void AddItem(object sender, RoutedEventArgs e)
         {
             float price = 0;
-            price = Convert.ToUInt64(PriceBox.Text);
+            price = Convert.ToUInt64(PriceBox1.Text);
             using (var context = new LoginDBEntities())
             {
-                var product = new ProductFromPeople()
+                var product = new ProductFromStore()
                 {
                     
                     UserName = Person.Login,
-                    ProductName = ItemBox.Text,
+                    ProductName = ItemBox1.Text,
                     Price = price 
 
                 };
-                context.ProductFromPeoples.Add(product);
+                context.ProductFromStores.Add(product);
                 context.SaveChanges();
-                ItemBox.Clear();
-                PriceBox.Clear();
+                ItemBox1.Clear();
+                PriceBox1.Clear();
 
 
             }
