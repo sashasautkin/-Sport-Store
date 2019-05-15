@@ -36,7 +36,7 @@ namespace Проект
             Person = new AutorizationFactory();
             Title1 = Person.getType().Type; 
         }
-        static  public string uUName;
+        static public string uUName;
         static public string uPassword; 
         private void BtnSubmit_Click(object sender, RoutedEventArgs e)
         {           

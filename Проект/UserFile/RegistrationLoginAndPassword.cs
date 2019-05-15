@@ -60,6 +60,24 @@ namespace Проект
                             }
                         }                  
                     }
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-DP7LGSG;Initial Catalog=LoginDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;"))
+                    {
+                        connection.Open();
+                        SqlDataAdapter dt = new SqlDataAdapter("select count (*) From tableBasket where UserName = ' " + login + "'", connection);
+                        DataTable table = new DataTable();
+                        dt.Fill(table);
+                        if (table.Rows[0][0].ToString() == "0")
+                        {
+                            if (login != "")
+                            {
+                                UName = login;
+                                SqlCommand comand = new SqlCommand("INSERT Into tableBasket (UserName) Values(@UserName)", connection);
+                                comand.Parameters.AddWithValue("UserName", login);
+                                comand.ExecuteNonQuery();
+                            }
+                        }
+                    }
+
                 }
             }
             catch (Exception ex)

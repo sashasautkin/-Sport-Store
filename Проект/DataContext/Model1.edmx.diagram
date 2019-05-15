@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="40c016db2f734f96af4237f544ef1003" Name="Diagram1">
+      <Diagram DiagramId="40c016db2f734f96af4237f544ef1003" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="LoginDBModel.ProductFromPeople" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="LoginDBModel.ProductFromStore" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="LoginDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LoginDBModel.tableBasket" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoginDBModel.tableBasket" Width="1.5" PointX="5.375" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LoginDBModel.tableCustomer" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LoginDBModel.tableUser" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="LoginDBModel.FK_ProductFromPeople_tableUser" ManuallyRouted="false" />

@@ -21,7 +21,5 @@ namespace Проект.DataContext
     
         public virtual tableUser tableUser { get; set; }
         public virtual ProductFromStore ProductFromStore { get; set; }
-
-      
     }
 }
